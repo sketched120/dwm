@@ -90,11 +90,13 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	/* brightness control */
-{ 0, XF86XK_MonBrightnessUp,   spawn, SHCMD("brightnessctl set +10%") },
-{ 0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 10%-") },
-{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	{ 0, XF86XK_MonBrightnessUp,   spawn, SHCMD("brightnessctl set +10%") },
+	{ 0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 10%-") }	,
+	{ MODKEY|ShiftMask,		XK_s, 	   spawn, 	SHCMD("scrot -s")},			
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
